@@ -16,7 +16,7 @@ public class Chapter1 {
         customer.addRental(rental2);
 
         System.out.println(customer.statement());
-        // System.out.println(customer.htmlStatement());
+        System.out.println(customer.htmlStatement());
 
 
     }
