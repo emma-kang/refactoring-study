@@ -8,14 +8,11 @@ public class ExtractMethod {
     private double _amount;
     private Vector _orders = new Vector();
 
-    void printOwing() {
+    public void printOwing() {
         Enumeration e = _orders.elements();
         double outstanding = 0.0;
 
-        // print banner
-        System.out.println("*************************");
-        System.out.println("***** Customer Owes *****");
-        System.out.println("*************************");
+        printBanner();
 
         // caculate outstanding
         while (e.hasMoreElements()) {
@@ -25,5 +22,12 @@ public class ExtractMethod {
         // print details
         System.out.println("name: " + _name);
         System.out.println("amount: " + outstanding);
+    }
+
+    public void printBanner() {
+        // print banner
+        System.out.println("*************************");
+        System.out.println("***** Customer Owes *****");
+        System.out.println("*************************");
     }
 }
