@@ -5,8 +5,7 @@ public class InlineMethod {
     private Order anOrder;
 
     public boolean inlineTemp() {
-        double basePrice = anOrder.basePrice();
-        return (basePrice > 1000);
+        return (anOrder.basePrice() > 1000);
     }
 
     public int getRating() {
