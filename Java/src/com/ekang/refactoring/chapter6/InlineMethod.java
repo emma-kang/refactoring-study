@@ -3,9 +3,16 @@ package com.ekang.refactoring.chapter6;
 public class InlineMethod {
     private int _numberOfLateDeliveries;
     private Order anOrder;
+    private int _quantity;
+    private double _itemPrice;
 
-    public boolean inlineTemp() {
-        return (anOrder.basePrice() > 1000);
+    public double inlineTemp() {
+        double basePrice = _quantity * _itemPrice;
+        if(basePrice > 1000)
+            return basePrice * 0.95;
+        else
+            return basePrice * 0.98;
+
     }
 
     public int getRating() {
