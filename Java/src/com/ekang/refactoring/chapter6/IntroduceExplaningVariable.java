@@ -6,9 +6,11 @@ public class IntroduceExplaningVariable {
     private int resize;
 
     public IntroduceExplaningVariable(){
-        if((platform.toUpperCase().indexOf("MAC") > -1) &&
-                (browser.toUpperCase().indexOf("IE") > -1) &&
-                wasInitialized() && resize > 0) {
+        final boolean isMacOs = platform.toUpperCase().indexOf("MAC") > -1;
+        final boolean isIEBrowser = browser.toUpperCase().indexOf("IE") > -1;
+        final boolean wasResized = resize > 0;
+
+        if(isMacOs && isIEBrowser && wasInitialized() && wasResized) {
             // do somethig;
         }
     }
