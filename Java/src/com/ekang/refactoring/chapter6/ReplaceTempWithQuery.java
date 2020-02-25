@@ -5,7 +5,7 @@ public class ReplaceTempWithQuery {
     private int _itemPrice;
 
     public double getPrice() {
-        final int basePrice = _quantity * _itemPrice;
+        final int basePrice = basePrice();
         final double discountFactor;
 
         if(basePrice > 1000)
@@ -14,5 +14,9 @@ public class ReplaceTempWithQuery {
             discountFactor = 0.98;
 
         return basePrice * discountFactor;
+    }
+
+    private int basePrice() {
+        return _quantity * _itemPrice;
     }
 }
