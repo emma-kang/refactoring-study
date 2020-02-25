@@ -8,6 +8,14 @@ public class SplitTempVariable {
     private double _mass;
     private int _delay;
 
+    public SplitTempVariable() {}
+    public SplitTempVariable(double pForce, double sForce, double mass, int delay) {
+        this._primaryForce = pForce;
+        this._secondaryForce = sForce;
+        this._mass = mass;
+        this._delay = delay;
+    }
+
     public void example() {
         // make a separate temporary variable for each assignment
         final double perimeter = 2 * (_height + _width);
