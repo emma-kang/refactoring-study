@@ -5,8 +5,7 @@ public class ReplaceTempWithQuery {
     private int _itemPrice;
 
     public double getPrice() {
-        final double discountFactor = discountFactor();
-        return basePrice() * discountFactor;
+        return basePrice() * discountFactor();
     }
 
     private int basePrice() {
