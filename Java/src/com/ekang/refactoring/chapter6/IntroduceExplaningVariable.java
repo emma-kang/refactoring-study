@@ -19,4 +19,13 @@ public class IntroduceExplaningVariable {
         return true;
     }
 
+    /*
+     * Expression can become very complex and hard to read.
+     * In such situations temporary variables can be helpful to break down the expression
+     * into something more manageable.
+     *
+     * Declare a final temporary variable, and set it to the result of part of the complex expression
+     * Replace the result part of the expression with the value of the temp. 
+     */
+
 }
