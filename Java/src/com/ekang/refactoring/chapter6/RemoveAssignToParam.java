@@ -15,8 +15,8 @@ package com.ekang.refactoring.chapter6;
  */
 
 public class RemoveAssignToParam {
-
-    public int discount(int inputVal, int quantity, int yearToDate) {
+    // 'final' : use it with a long method to help see whether anything is changing the parameter
+    public int discount(final int inputVal, final int quantity, final int yearToDate) {
         int result = inputVal;
         if (inputVal > 50) result -= 2;
         if (quantity > 100) result -= 1;
