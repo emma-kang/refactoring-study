@@ -6,14 +6,16 @@ public abstract class Order {
     abstract double basePrice();
 
     double price() {
-        double primaryBasePrice;
-        double secondaryBasePrice;
+        // 1. Using Replace Temp with Query (help to reduce this burden)
+        // 2. Apply Replace Method with Method Object turns all local var into fields on the method obj
+        // 3. Use Extract Method
+        double primaryBasePrice = 1.2;
+        double secondaryBasePrice = 2.3;
         double tertiaryBasePrice;
-        double result = 0;
 
         // long computation
         // ...
-        return result;
+        return primaryBasePrice + secondaryBasePrice;
     }
 
 }
