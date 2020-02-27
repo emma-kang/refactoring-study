@@ -29,8 +29,11 @@ class Gamma {
     private int importantValue2;
     private int importantValue3;
 
-    Gamma(Account account) {
+    Gamma(Account account, int inputValArg, int quantityArg, int yearToDateArg) {
         _account = account;
+        inputVal = inputValArg;
+        quantity = quantityArg;
+        yearToDate = yearToDateArg;
     }
 
 }
