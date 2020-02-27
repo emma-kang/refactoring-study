@@ -16,3 +16,21 @@ public class Account {
         return 0;
     }
 }
+
+// step 1. To turn into a method object, declare a new class
+class Gamma {
+    // provide a final field for the original object
+    // and a field for each parameter and temporary variable in the method
+    private final Account _account;
+    private int inputVal;
+    private int quantity;
+    private int yearToDate;
+    private int importantValue1;
+    private int importantValue2;
+    private int importantValue3;
+
+    Gamma(Account account) {
+        _account = account;
+    }
+
+}
