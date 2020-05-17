@@ -22,6 +22,6 @@ public class Account {
 
     // Move field Example
     double interestForAmount_days (double amount, int days) {
-        return _interestRate * amount * days / 365;
+        return _type.getInterestRate() * amount * days / 365;
     }
 }
