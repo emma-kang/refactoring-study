@@ -7,7 +7,6 @@ package com.ekang.refactoring.chapter7;
  */
 public class Person {
     private String _name;
-    private String _officeAreaCode;
     private String _officeNumber;
     private TelephoneNumber _officeTelephone = new TelephoneNumber();
 
@@ -16,18 +15,10 @@ public class Person {
     }
     // Let's extract the telephone number
     public String getTelephoneNumber() {
-        return ("(" + getOfficeAreaCode() + ")" + _officeNumber);
+        return _officeTelephone.getTelephoneNumber();
     }
-    String getOfficeAreaCode() {
-        return _officeTelephone.getAreaCode();
-    }
-    void setOfficeAreaCode(String arg) {
-        _officeTelephone.setAreaCode(arg);
-    }
-    String getOfficeNumber() {
-        return _officeNumber;
-    }
-    void setOfficeNumber(String arg) {
-        _officeNumber = arg;
+
+    TelephoneNumber getOfficeTelephone() {
+        return _officeTelephone;
     }
 }
