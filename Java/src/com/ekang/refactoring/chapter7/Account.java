@@ -21,7 +21,21 @@ public class Account {
     }
 
     // Move field Example
+    // If a lot of methods use the interest rate field, use Self-Encapsulate Field
     double interestForAmount_days (double amount, int days) {
-        return _type.getInterestRate() * amount * days / 365;
+        return getInterestRate() * amount * days / 365;
+    }
+
+    // Self-Encapsulation allows to take a smaller step 
+    private void setInterestRate (double arg) {
+        _interestRate = arg;
+        // second way
+        // _type.setInterestRate(arg);
+    }
+
+    private double getInterestRate() {
+        return _interestRate;
+        // second way
+        // _type.getInterestRate();
     }
 }
